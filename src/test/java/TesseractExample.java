@@ -5,11 +5,12 @@ import static org.bytedeco.javacpp.lept.*;
 import static org.bytedeco.javacpp.tesseract.*;
 import static org.junit.Assert.assertTrue;
 
-public class BasicTesseractExampleTest {
+public class TesseractExample {
     
     @Test
-    public void givenTessBaseApi_whenImageOcrd_thenTextDisplayed() throws Exception {
-        BytePointer outText;
+    public void generateTextFromImage() throws Exception {
+        
+    	BytePointer outText;
 
         TessBaseAPI api = new TessBaseAPI();
         if (api.Init(".", "ENG") != 0) {
